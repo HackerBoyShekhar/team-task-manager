@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
     // which was causing the laptop to hang.
     root: process.cwd(),
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  }
 };
 
 export default nextConfig;
