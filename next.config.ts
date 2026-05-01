@@ -1,14 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  turbopack: {
-    // Set the root to the current directory to prevent 
-    // it from scanning the entire user folder (C:\Users\singh\)
-    // which was causing the laptop to hang.
-    root: process.cwd(),
+  experimental: {
+    allowedDevOrigins: ['dirty-boxes-do.loca.lt', '*.loca.lt'],
   },
-  eslint: {
-    ignoreDuringBuilds: true,
+  turbopack: {
+    root: process.cwd(),
   },
   typescript: {
     ignoreBuildErrors: true,
